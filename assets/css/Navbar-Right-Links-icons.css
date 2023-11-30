@@ -91,6 +91,12 @@
   border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
 }
 
+@media (max-width: 320px) {
+  .navbar-brand img {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-brand img {
     width: 80px;
@@ -107,5 +113,13 @@
   .navbar-brand span {
     font-size: 37px;
   }
+}
+
+#quiver-buttons .shortcut-text {
+  opacity: 0.5;
+  font-size: small;
+}
+
+.dropdown-menu {
 }
 

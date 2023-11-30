@@ -97,15 +97,13 @@
   }
 }
 
-@media (max-width: 768px) {
-  .navbar-brand img {
-    width: 80px;
-  }
+.navbar-brand {
+  display: none;
 }
 
-@media (min-width: 768px) {
-  .navbar-brand span {
-    font-size: 37px;
+@media (max-width: 768px) {
+  .navbar-brand img {
+    display: none;
   }
 }
 
@@ -118,8 +116,5 @@
 #quiver-buttons .shortcut-text {
   opacity: 0.5;
   font-size: small;
-}
-
-.dropdown-menu {
 }
 

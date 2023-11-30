@@ -617,6 +617,16 @@ class UI {
 
         // The user settings, which are stored persistently across sessions in `localStorage`.
         this.settings = new Settings();
+
+        // Quiver B interface:
+        parent.quiverUi = this;
+    }
+
+    user_undo_action()
+    {
+        const ui = this;
+        ui.history.undo(ui);
+        ui.toolbar.update(ui);
     }
 
     /// Clear the current diagram. This also clears the history.
@@ -6063,7 +6073,7 @@ class Toolbar {
         const add_action = (name, combinations, action) => {
             const shortcut_name = Shortcuts.name(combinations);
 
-            const button = new DOM.Element("button", { class: "action", "data-name": name })
+            const button = new DOM.Element("button", { class: "action", "data-name": name, style:"display:none" })
                 .add(new DOM.Element("span", { class: "symbol" }).add(
                     new DOM.Element("img", { src: `icons/${
                         name.toLowerCase().replace(/ /g, "-")
@@ -6111,9 +6121,7 @@ class Toolbar {
         add_action(
             "Undo",
             [{ key: "Z", modifier: true, context: Shortcuts.SHORTCUT_PRIORITY.Defer }],
-            () => {
-                ui.history.undo(ui);
-            },
+            ui.user_undo_action,
         );
 
         add_action(

@@ -2,23 +2,19 @@
 
 [Official Quiver🐝 live site](https://enjoysmath.github.io/quiver-bee/)
 
-This repository is a fork of original author varkor's diagram editor called "quiver".
+This repository is a fork of original author varkor's diagram editor [quiver](https://q.uiver.app)
 
-> **quiver** is a modern, graphical editor for [commutative] and [pasting diagrams], capable of
-rendering high-quality diagrams for screen viewing, and exporting to LaTeX via [tikz-cd].   -varkor
+> **quiver** is a modern, graphical editor for commutative and pasting diagrams, capable of
+rendering high-quality diagrams for screen viewing, and exporting to LaTeX via tikz-cd.   -varkor
 
 Mathematical areas of use include Category Theory, Homological Algebra, Topos Theory, and essentially any heavily arrow-based subject.
 
 > Creating and modifying diagrams with **quiver** is orders of magnitude faster than writing the
 equivalent LaTeX by hand and, with a little experience, competes with pen-and-paper.  -varkor
 
-[commutative]: https://en.wikipedia.org/wiki/Commutative_diagram
-[pasting diagrams]: https://ncatlab.org/nlab/show/pasting+diagram
-[tikz-cd]: https://github.com/astoff/tikz-cd
-
 ## Features & screenshots
 
-**quiver** features an efficient, intuitive interface for creating complex commutative diagrams and
+> **quiver** features an efficient, intuitive interface for creating complex commutative diagrams and
 pasting diagrams. It's easy to draw diagrams involving pullbacks and pushouts,
 
 [![Pullback](screenshots/pullback.png "Pullback")](http://q.uiver.app/?q=WzAsNSxbMSwyLCJBIl0sWzIsMSwiQiJdLFsyLDIsIkMiXSxbMSwxLCJBIFxcdGltZXNfQyBCIl0sWzAsMCwiWCJdLFswLDIsImYiLDJdLFsxLDIsImciXSxbMywwLCJcXHBpXzEiLDJdLFszLDEsIlxccGlfMiJdLFs0LDAsImEiLDIseyJjdXJ2ZSI6M31dLFs0LDEsImIiLDAseyJjdXJ2ZSI6LTN9XSxbNCwzLCJcXGxhbmdsZSBhLCBiIFxccmFuZ2xlIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIiwibGV2ZWwiOjF9fX1dLFszLDIsIiIsMSx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dXQ==)

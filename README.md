@@ -1,8 +1,9 @@
-# Quiver🐝: a modern commutative diagram editor useable on all web platforms
+# Quiver🐝: a diagram editor useable on all web platforms
 
 [Official Quiver🐝 live site](https://enjoysmath.github.io/quiver-bee/)
 
-This repository is a fork of original author varkor's diagram editor [quiver](https://q.uiver.app).
+This repository is a fork of original author varkor's diagram editor [quiver](https://q.uiver.app).  We're in the process of "wrapping"/modifying it in order
+to make it more responsive to various screen sizes.  On touch screens, we ensure everything works properly.  Varkor did an excellent job already - placing objects / arrows works already almost 100% perfectly on your phone.
 
 > **quiver** is a modern, graphical editor for commutative and pasting diagrams, capable of
 rendering high-quality diagrams for screen viewing, and exporting to LaTeX via tikz-cd.   -varkor

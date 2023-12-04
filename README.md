@@ -1,6 +1,6 @@
-# quiver: a modern commutative diagram editor
+# Quiver 🐝: a modern commutative diagram editor useable on all web platforms
 
-[![quiver](screenshots/title.png "quiver: a modern commutative diagram editor")](https://q.uiver.app)
+[![quiver](screenshots/title.png "quiver: a modern commutative diagram editor")](https://q.uiver.app](https://enjoysmath.github.io/quiver-bee/)
 
 **quiver** is a modern, graphical editor for [commutative] and [pasting diagrams], capable of
 rendering high-quality diagrams for screen viewing, and exporting to LaTeX via [tikz-cd].

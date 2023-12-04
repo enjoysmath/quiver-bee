@@ -1,6 +1,6 @@
 # QuiverBee: a diagram editor useable on all web platforms
 
-[Official QuiverBee live site](https://enjoysmath.github.io/quiver-bee/)
+[QuiverBee live site](https://enjoysmath.github.io/quiver-bee/)
 
 This repository is a fork of original author varkor's diagram editor [quiver](https://q.uiver.app).  We're in the process of "wrapping"/modifying it in order
 to make it more responsive to various screen sizes.  On touch screens, we ensure everything works properly.  Varkor did an excellent job already - placing objects / arrows works already almost 100% perfectly on your phone.

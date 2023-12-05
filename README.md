@@ -1,4 +1,4 @@
-# QuiverBee: a diagram editor useable on all web platforms
+# QuiverBee: a diagram editor for most web platforms
 
 [QuiverBee live site](https://enjoysmath.github.io/quiver-bee/)
 

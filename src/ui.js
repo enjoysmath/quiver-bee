@@ -675,6 +675,18 @@ class UI {
         ui.colour_picker.close();
     }
 
+    user_zoom_in_action()
+    {
+        const ui = this;
+        ui.pan_view(Offset.zero(), 0.25);
+    }
+
+    user_zoom_out_action()
+    {
+        const ui = this;
+        ui.pan_view(Offset.zero(), -0.25);
+    }
+    
     /// Clear the current diagram. This also clears the history.
     clear_quiver() {
         // Clear the existing quiver.
@@ -6222,15 +6234,15 @@ class Toolbar {
             "Zoom out",
             [{ key: "-", modifier: true, context: Shortcuts.SHORTCUT_PRIORITY.Always }],
             () => {
-                ui.pan_view(Offset.zero(), -0.25);
-            },
+                ui.user_zoom_out_action();
+            }
         );
 
         add_action(
             "Zoom in",
             [{ key: "=", modifier: true, context: Shortcuts.SHORTCUT_PRIORITY.Always }],
             () => {
-                ui.pan_view(Offset.zero(), 0.25);
+                ui.user_zoom_in_action();
             },
         );
 

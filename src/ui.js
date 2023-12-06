@@ -626,7 +626,53 @@ class UI {
     {
         const ui = this;
         ui.history.undo(ui);
-        ui.toolbar.update(ui);
+    }
+
+    user_redo_action()
+    {
+        const ui = this;
+        ui.history.redo(ui);
+    }
+
+    user_save_action()
+    {
+        const ui = this;
+        const { data } = ui.quiver.export(
+            "base64",
+            ui.settings,
+            ui.options(),
+            ui.definitions(),
+        );
+        // `data` is the new URL.
+        history.pushState({}, "", data);
+
+        const url = window.location;
+        
+        const index = url.indexOf("#q=");
+
+        if (index != -1)
+        {
+            const base64 = url.slice(index+3);
+
+            var test = base64;
+        }
+
+        parent.window.location = url;
+    }
+
+    user_select_all_action()
+    {
+        const ui = this;
+        ui.select(...ui.quiver.all_cells());
+    }
+
+    user_select_none_action()
+    {
+        const ui = this;
+        ui.deselect();
+        ui.panel.hide(ui);
+        ui.panel.label_input.parent.class_list.add("hidden");
+        ui.colour_picker.close();
     }
 
     /// Clear the current diagram. This also clears the history.
@@ -6107,28 +6153,23 @@ class Toolbar {
             "Save",
             [{ key: "S", modifier: true, context: Shortcuts.SHORTCUT_PRIORITY.Always }],
             () => {
-                const { data } = ui.quiver.export(
-                    "base64",
-                    ui.settings,
-                    ui.options(),
-                    ui.definitions(),
-                );
-                // `data` is the new URL.
-                history.pushState({}, "", data);
+                ui.user_save_action();
             },
         );
 
         add_action(
             "Undo",
             [{ key: "Z", modifier: true, context: Shortcuts.SHORTCUT_PRIORITY.Defer }],
-            ui.user_undo_action,
+            () => {
+                ui.user_undo_action();
+            }
         );
 
         add_action(
             "Redo",
             [{ key: "Z", modifier: true, shift: true, context: Shortcuts.SHORTCUT_PRIORITY.Defer }],
             () => {
-                ui.history.redo(ui);
+                ui.user_redo_action();
             },
         );
 
@@ -6136,7 +6177,7 @@ class Toolbar {
             "Select all",
             [{ key: "A", modifier: true, context: Shortcuts.SHORTCUT_PRIORITY.Defer }],
             () => {
-                ui.select(...ui.quiver.all_cells());
+                ui.user_select_all_action();
             },
         );
 
@@ -6144,10 +6185,7 @@ class Toolbar {
             "Deselect all",
             [{ key: "A", modifier: true, shift: true, context: Shortcuts.SHORTCUT_PRIORITY.Defer }],
             () => {
-                ui.deselect();
-                ui.panel.hide(ui);
-                ui.panel.label_input.parent.class_list.add("hidden");
-                ui.colour_picker.close();
+                ui.user_select_none_action();
             },
         );
 

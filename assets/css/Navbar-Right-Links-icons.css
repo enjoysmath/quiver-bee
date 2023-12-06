@@ -55,20 +55,8 @@
   border-radius: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1079px) {
   #quiver-buttons span {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  #quiver-buttons span {
-    margin-right: 8px;
-  }
-}
-
-@media (max-width: 768px) {
-  #quiver-buttons > button > span {
     display: none;
   }
 }
@@ -83,38 +71,65 @@
   }
 }
 
-#quiver-buttons .btn:hover {
-  box-shadow: 0px 0px 5px 3px var(--bs-primary);
-}
-
 .border {
   border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 1079px) {
   .navbar-brand img {
     display: none;
   }
 }
 
-.navbar-brand {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .navbar-brand img {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
   .navbar-brand span {
-    font-size: 37px;
+    font-size: 31px;
   }
 }
 
 #quiver-buttons .shortcut-text {
   opacity: 0.5;
   font-size: small;
+}
+
+.navbar .btn-group {
+  border: none!important;
+}
+
+@media (max-width: 1079px) {
+  .navbar .btn-group > .btn {
+    margin-right: 4px;
+    width: 37px;
+    height: 37px;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 411px) {
+  .navbar .btn-group {
+    margin-right: -4px;
+    /*width: 40px;*/
+    height: 40px;
+  }
+}
+
+@media (min-width: 412px) {
+  .navbar .btn-group {
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1080px) {
+  .navbar .btn-group > .btn {
+    font-size: 12pt;
+    margin-right: 8px;
+    height: 37px;
+    margin-top: 8px;
+  }
+}
+
+#quiver-buttons .dropdown > a > svg, #quiver-buttons button > svg {
+  width: 100%;
+  height: auto;
 }
 
